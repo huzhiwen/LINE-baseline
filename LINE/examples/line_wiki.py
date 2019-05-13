@@ -1,6 +1,7 @@
 
 import numpy as np
-
+import sys
+sys.path.append('../')
 from ge.classify import read_node_label, Classifier
 from ge import LINE
 from sklearn.linear_model import LogisticRegression
