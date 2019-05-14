@@ -205,7 +205,7 @@ class LINE:
 
         return self._embeddings
 
-    def train(self, batch_size=1024, epochs=1, initial_epoch=0, verbose=1, times=1):
+    def train(self, batch_size=128, epochs=1, initial_epoch=0, verbose=1, times=1):
         self.reset_training_config(batch_size, times)
         hist = self.model.fit_generator(self.batch_it, epochs=epochs, initial_epoch=initial_epoch, steps_per_epoch=self.steps_per_epoch,
                                         verbose=verbose)
