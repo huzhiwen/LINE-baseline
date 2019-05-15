@@ -1,0 +1,84 @@
+WARNING:tensorflow:From ../ge/models/line.py:53: calling reduce_sum (from tensorflow.python.ops.math_ops) with keep_dims is deprecated and will be removed in a future version.
+Instructions for updating:
+keep_dims is deprecated, use keepdims instead
+2019-05-14 20:57:19.004338: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-05-14 20:57:19.515954: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1411] Found device 0 with properties: 
+name: TITAN Xp major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:04:00.0
+totalMemory: 11.91GiB freeMemory: 11.75GiB
+2019-05-14 20:57:19.824858: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1411] Found device 1 with properties: 
+name: TITAN Xp major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:06:00.0
+totalMemory: 11.91GiB freeMemory: 9.90GiB
+2019-05-14 20:57:20.100931: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1411] Found device 2 with properties: 
+name: TITAN Xp major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:07:00.0
+totalMemory: 11.91GiB freeMemory: 11.13GiB
+2019-05-14 20:57:20.411203: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1411] Found device 3 with properties: 
+name: TITAN Xp major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:08:00.0
+totalMemory: 11.91GiB freeMemory: 1.13GiB
+2019-05-14 20:57:20.763799: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1411] Found device 4 with properties: 
+name: TITAN Xp major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:0c:00.0
+totalMemory: 11.91GiB freeMemory: 2.85GiB
+2019-05-14 20:57:21.128264: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1411] Found device 5 with properties: 
+name: TITAN Xp major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:0d:00.0
+totalMemory: 11.91GiB freeMemory: 10.56GiB
+2019-05-14 20:57:21.524301: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1411] Found device 6 with properties: 
+name: TITAN Xp major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:0e:00.0
+totalMemory: 11.91GiB freeMemory: 4.24GiB
+2019-05-14 20:57:21.900171: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1411] Found device 7 with properties: 
+name: TITAN Xp major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:0f:00.0
+totalMemory: 11.91GiB freeMemory: 11.17GiB
+2019-05-14 20:57:21.959560: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1490] Adding visible gpu devices: 0, 1, 2, 3, 4, 5, 6, 7
+2019-05-14 20:57:25.425489: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-05-14 20:57:25.425900: I tensorflow/core/common_runtime/gpu/gpu_device.cc:977]      0 1 2 3 4 5 6 7 
+2019-05-14 20:57:25.425913: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990] 0:   N Y Y Y Y Y Y Y 
+2019-05-14 20:57:25.425919: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990] 1:   Y N Y Y Y Y Y Y 
+2019-05-14 20:57:25.425924: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990] 2:   Y Y N Y Y Y Y Y 
+2019-05-14 20:57:25.425929: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990] 3:   Y Y Y N Y Y Y Y 
+2019-05-14 20:57:25.425934: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990] 4:   Y Y Y Y N Y Y Y 
+2019-05-14 20:57:25.425947: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990] 5:   Y Y Y Y Y N Y Y 
+2019-05-14 20:57:25.425953: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990] 6:   Y Y Y Y Y Y N Y 
+2019-05-14 20:57:25.425958: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990] 7:   Y Y Y Y Y Y Y N 
+2019-05-14 20:57:25.427767: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1103] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 11364 MB memory) -> physical GPU (device: 0, name: TITAN Xp, pci bus id: 0000:04:00.0, compute capability: 6.1)
+2019-05-14 20:57:25.639198: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1103] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 9567 MB memory) -> physical GPU (device: 1, name: TITAN Xp, pci bus id: 0000:06:00.0, compute capability: 6.1)
+2019-05-14 20:57:25.837477: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1103] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:2 with 10761 MB memory) -> physical GPU (device: 2, name: TITAN Xp, pci bus id: 0000:07:00.0, compute capability: 6.1)
+2019-05-14 20:57:26.060844: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1103] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:3 with 868 MB memory) -> physical GPU (device: 3, name: TITAN Xp, pci bus id: 0000:08:00.0, compute capability: 6.1)
+2019-05-14 20:57:26.082535: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1103] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:4 with 2552 MB memory) -> physical GPU (device: 4, name: TITAN Xp, pci bus id: 0000:0c:00.0, compute capability: 6.1)
+2019-05-14 20:57:26.136527: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1103] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:5 with 10207 MB memory) -> physical GPU (device: 5, name: TITAN Xp, pci bus id: 0000:0d:00.0, compute capability: 6.1)
+2019-05-14 20:57:26.365690: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1103] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:6 with 3975 MB memory) -> physical GPU (device: 6, name: TITAN Xp, pci bus id: 0000:0e:00.0, compute capability: 6.1)
+2019-05-14 20:57:26.456338: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1103] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:7 with 10799 MB memory) -> physical GPU (device: 7, name: TITAN Xp, pci bus id: 0000:0f:00.0, compute capability: 6.1)
+Epoch 1/10
+ - 665s - loss: 0.5994
+Epoch 2/10
+ - 648s - loss: 0.2686
+Epoch 3/10
+ - 649s - loss: 0.0722
+Epoch 4/10
+ - 650s - loss: 0.0254
+Epoch 5/10
+ - 650s - loss: 0.0172
+Epoch 6/10
+ - 650s - loss: 0.0142
+Epoch 7/10
+ - 650s - loss: 0.0125
+Epoch 8/10
+ - 650s - loss: 0.0114
+Epoch 9/10
+ - 650s - loss: 0.0106
+Epoch 10/10
+ - 650s - loss: 0.0102
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/ops/gradients_impl.py:108: UserWarning: Converting sparse IndexedSlices to a dense Tensor of unknown shape. This may consume a large amount of memory.
+  "Converting sparse IndexedSlices to a dense Tensor of unknown shape. "
+/usr/lib/python3/dist-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/usr/lib/python3/dist-packages/sklearn/metrics/classification.py:1137: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true samples.
+  'recall', 'true', average, warn_for)
+Training classifier using 80.00% nodes...
+-------------------
+{'micro': 0.7699115044247787, 'macro': 0.5132623224728488, 'samples': 0.7699115044247787, 'weighted': 0.7698033801317452, 'acc': 0.7699115044247787}
