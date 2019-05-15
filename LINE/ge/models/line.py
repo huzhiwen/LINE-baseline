@@ -48,7 +48,8 @@ def create_model(numNodes, embedding_size, order='second'):
 
     v_i_emb_second = second_emb(v_i)
     v_j_context_emb = context_emb(v_j)
-
+    
+    tf.device('/gpu:2')
     first = Lambda(lambda x: tf.reduce_sum(
         x[0]*x[1], axis=-1, keep_dims=False), name='first_order')([v_i_emb, v_j_emb])
     second = Lambda(lambda x: tf.reduce_sum(
