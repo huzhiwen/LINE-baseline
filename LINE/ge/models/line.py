@@ -50,6 +50,10 @@ def create_model(numNodes, embedding_size, order='second'):
     v_j_context_emb = context_emb(v_j)
     
     tf.device('/gpu:2')
+    gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=0.333)
+    sess = tf.Session(config=tf.ConfigProto(gpu_options=gpu_options))
+
+
     first = Lambda(lambda x: tf.reduce_sum(
         x[0]*x[1], axis=-1, keep_dims=False), name='first_order')([v_i_emb, v_j_emb])
     second = Lambda(lambda x: tf.reduce_sum(
@@ -78,6 +82,11 @@ class LINE:
         """
         if order not in ['first', 'second', 'all']:
             raise ValueError('mode must be fisrt,second,or all')
+
+        tf.device('/gpu:2')
+        gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=0.333)
+        sess = tf.Session(config=tf.ConfigProto(gpu_options=gpu_options))
+
 
         self.graph = graph
         self.idx2node, self.node2idx = preprocess_nxgraph(graph)
