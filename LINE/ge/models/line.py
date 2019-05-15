@@ -84,10 +84,10 @@ class LINE:
         if order not in ['first', 'second', 'all']:
             raise ValueError('mode must be fisrt,second,or all')
 
-        tf.device('/gpu:2')
         gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=0.333)
         sess = tf.Session(config=tf.ConfigProto(gpu_options=gpu_options))
-
+        config = tf.ConfigProto(device_count = {'GPU': 7}) 
+        sess = tf.Session(config=config)
 
         self.graph = graph
         self.idx2node, self.node2idx = preprocess_nxgraph(graph)
