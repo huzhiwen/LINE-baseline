@@ -52,6 +52,7 @@ def create_model(numNodes, embedding_size, order='second'):
     tf.device('/gpu:2')
     gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=0.333)
     sess = tf.Session(config=tf.ConfigProto(gpu_options=gpu_options))
+    config = tf.ConfigProto(device_count = {'GPU': 7}) and then sess = tf.Session(config=config)
 
 
     first = Lambda(lambda x: tf.reduce_sum(
