@@ -5,8 +5,8 @@ sys.path.append('../')
 from ge.classify import read_node_label, Classifier
 from ge import LINE
 from sklearn.linear_model import LogisticRegression
-import matplotlib
-matplotlib.use('agg')
+# import matplotlib
+# matplotlib.use('agg')
 import matplotlib.pyplot as plt
 import networkx as nx
 from sklearn.manifold import TSNE
@@ -48,7 +48,7 @@ if __name__ == "__main__":
                          create_using=nx.DiGraph(), nodetype=None, data=[('weight', int)])
 
     model = LINE(G, embedding_size=128, order='second')
-    model.train(batch_size=128, epochs=10, verbose=2)
+    model.train(batch_size=128, epochs=30, verbose=2)
     embeddings = model.get_embeddings()
 
     evaluate_embeddings(embeddings)
