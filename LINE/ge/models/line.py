@@ -49,7 +49,6 @@ def create_model(numNodes, embedding_size, order='second'):
     v_i_emb_second = second_emb(v_i)
     v_j_context_emb = context_emb(v_j)
     
-    tf.device('/gpu:2')
     gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=0.333)
     sess = tf.Session(config=tf.ConfigProto(gpu_options=gpu_options))
     config = tf.ConfigProto(device_count = {'GPU': 7}) and then sess = tf.Session(config=config)
