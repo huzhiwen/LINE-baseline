@@ -13,7 +13,7 @@ from sklearn.manifold import TSNE
 
 
 def evaluate_embeddings(embeddings):
-    X, Y = read_node_label('../data/wiki/friend_labels_baseline.txt')
+    X, Y = read_node_label('../data/wiki/retweet_labels_baseline.txt')
     tr_frac = 0.8
     print("Training classifier using {:.2f}% nodes...".format(
         tr_frac * 100))
@@ -22,7 +22,7 @@ def evaluate_embeddings(embeddings):
 
 
 def plot_embeddings(embeddings,):
-    X, Y = read_node_label('../data/wiki/friend_labels_baseline.txt')
+    X, Y = read_node_label('../data/wiki/retweet_labels_baseline.txt')
 
     emb_list = []
     for k in X:
@@ -44,11 +44,11 @@ def plot_embeddings(embeddings,):
 
 
 if __name__ == "__main__":
-    G = nx.read_edgelist('../data/wiki/friend_list_baseline.csv',
+    G = nx.read_edgelist('../data/wiki/retweet_list_baseline.csv',
                          create_using=nx.DiGraph(), nodetype=None, data=[('weight', int)])
 
     model = LINE(G, embedding_size=128, order='second')
-    model.train(batch_size=128, epochs=50, verbose=2)
+    model.train(batch_size=128, epochs=30, verbose=2)
     embeddings = model.get_embeddings()
 
     evaluate_embeddings(embeddings)
