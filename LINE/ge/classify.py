@@ -53,6 +53,7 @@ class Classifier(object):
         return Y
 
     def split_train_evaluate(self, X, Y, train_precent, seed=0):
+        print("get here")
         state = numpy.random.get_state()
 
         training_size = int(train_precent * len(X))
